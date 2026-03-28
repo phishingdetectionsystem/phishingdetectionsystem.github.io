@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <div class="container">
+        <header>
+            
+            
+            <h1>🛡️ Phishing Detection System</h1>
+            <p>Advanced ML-powered URL security checker</p>
+        </header>
+
+        <main>
+            <!-- URL Input Form -->
+            <div class="form-container">
+                <form id="urlForm">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="urlInput" 
+                            name="url" 
+                            placeholder="Enter URL to check (e.g., https://example.com)" 
+                            required
+                        >
+                        <button type="submit" id="submitButton">
+                            Check URL
+                        </button>
+                    </div>
+                </form>
+                
+               <!-- Loading Indicator -->
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing URL...</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results" style="display: none;">
+                
+            <!-- Results will be inserted here by JavaScript -->
+             <!-- 🔙 BACK BUTTON -->
+            <button id="backButton" class="back-btn">
+        ⬅ Back
+    </button>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features" id="featuresSection">
+                <h2>Why Use Our System?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card" id="featuresSection">
+                        <span class="feature-icon">🤖</span>
+                        <h3>AI-Powered</h3>
+                        <p>Advanced machine learning with 95%+ accuracy</p>
+                    </div>
+                    <div class="feature-card" id="featuresSection">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Lightning Fast</h3>
+                        <p>Results in milliseconds</p>
+                    </div>
+                    <div class="feature-card" id="featuresSection">
+                        <span class="feature-icon">🔍</span>
+                        <h3>10+ Features</h3>
+                        <p>Comprehensive URL analysis</p>
+                    </div>
+                    <div class="feature-card" id="featuresSection">
+                        <span class="feature-icon">🛡️</span>
+                        <h3>Real-time Protection</h3>
+                        <p>Instant threat detection</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Phishing Detection System. College Project.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', path='js/script.js') }}"></script>
+</body>
+</html>
